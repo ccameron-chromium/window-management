@@ -425,6 +425,8 @@ The <dfn for="screen">advanced observable properties</dfn> of a [=/screen=] are:
 * The [=/screen=]'s designation as [=/primary=] or [=/secondary=]
 * The [=/screen=]'s designation as [=/internal=] or [=/external=]
 
+Note: The [=/screen=]'s [=screen/HDR headroom=] is included in neither the [=screen/basic observable properties=] nor the [=screen/advanced observable properties=] because it changes independently of these properties and at high frequency.
+
 <!-- ====================================================================== -->
 # API # {#api}
 <!-- ====================================================================== -->
@@ -730,6 +732,8 @@ When any [=screen/basic observable property=] or [=screen/advanced observable pr
 The <dfn attribute for=ScreenDetailed>onhdrheadroomchange</dfn> attribute is an [=/event handler IDL attribute=] whose [=/event handler event type=] is {{ScreenDetailed/hdrheadroomchange!!event}}.
 
 When the [=screen/HDR headroom=] of a [=/screen=] represented by a {{ScreenDetailed}} object |screenDetailed| changes, [=/queue a global task=] on the [=/relevant global object=] of |screenDetailed| using the [=/window placement task source=] to [=/fire an event=] named <dfn event for=ScreenDetailed>`hdrheadroomchange`</dfn> at |screenDetailed|.
+
+Note: When the [=screen/HDR headroom=] of a [=/screen=] changes, no event of type {{ScreenDetailed/change!!event}} will be fired. This is because the [=screen/HDR headroom=] of a screen changes independently of the properties that would fire such an event. Additionally, changes in the [=screen/HDR headroom=] often happen at high frequency (e.g, when a [=/screen=] is transitioning into high dynamic range mode, or when a [=/screen=] is adjusting its brightness).
 
 <!-- ====================================================================== -->
 ## Extensions to {{FullscreenOptions}} ## {#api-extensions-to-fullscreen-options}
