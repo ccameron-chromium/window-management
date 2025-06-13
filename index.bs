@@ -289,7 +289,7 @@ Advisement: While many screen attributes could be used for [=/active fingerprint
 
 A [=/screen=] has an <dfn>HDR headroom</dfn>, which is the current [=/HDR headroom=] of the screen.
 
-Note: The [=screen/HDR headroom=], being the base 2 logarithm of the peak luminance of the screen to the [=/HDR reference white=] luminance of the screen (which is the luminance of '[=/white=]') has to be zero for [=/standard dynamic range=] displays. For [=/high dynamic range=] capable displays it can be zero or non-zero and can vary over time in response to changes in the presence or absence of HDR content on the screen, screen brightness, ambient brightness, power management feature, and other factors.
+Note: The [=screen/HDR headroom=], being the base 2 logarithm of the peak luminance of the screen to the [=/HDR reference white=] luminance of the screen (which is the luminance of '[=/white=]') has to be zero for [=/standard dynamic range=] displays. For [=/high dynamic range=] capable displays it can be zero or greater than zero and can vary over time in response to changes in the presence or absence of HDR content on the screen, screen brightness, ambient brightness, power management feature, and other factors.
 
 Issue: Should [=screen/device pixel ratio=] include the [page-zoom](https://drafts.csswg.org/cssom-view-1/#page-zoom)?
 
